@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show " role="alert">
+        <strong>Message:</strong>{{message}}
+        <button type="submit" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <form action="{% url 'signup'%}" method="post" style="background: wheat; width: 50%; margin-left: 400px;margin-top: 70px; border-radius: 5px;">
+        {% csrf_token%}
+        <div class="head" style="background: teal; height: 60px;">
+       <H2 style="text-align: center; color: white; "> MUBS SIGNUP SCREEN</H2>
+    </div>
+    <br>
+    <div style="text-align: center;">
+    <label for="username" style="margin-right: 180px;">username:</label><br>
+    <input type="text" id="username" name="username" placeholder="Create Your Username" style="width: 250px; border: 3px solid teal; border-radius: 5px;" required>
+    <br><br>
+    <label for="email" style="margin-right: 200px;">email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter Your email" style="width: 250px;border: 3px solid teal; border-radius: 5px;" required>
+    <br><br>
+    <label for="password" style="margin-right: 180px;">password:</label><br>
+    <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" style="width: 250px;border: 3px solid teal; border-radius: 5px;" required>
+    <br><br>
+    <label for="password" style="margin-right: 130px;"> confirm password:</label><br>
+    <input type="password" id="pass2" name="pass2" placeholder="confirm Password" style="width: 250px;border: 3px solid teal; border-radius: 5px;" required>
+    <br><br>
+    <div style="margin-right: 120px;">
+    <input type="checkbox">
+    <label for="checkbox">Remember me</label>
+  </div>
+  <br>
+    <button type="submit" style="width: 80px; border: 3px solid teal; border-radius: 5px; color: dodgerblue; cursor: pointer;" >Signup</button>
+    <button style="width: 150px; border: 3px solid teal; border-radius: 5px; cursor: pointer;"><a href="{% url 'signin'%}" style="text-decoration: none; color: dodgerblue;">Login</a></button><br><br><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <!-- fontawesome -->
+   <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
+</head>
+<body>
+    <div class="header" style="background: wheat;">
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show " role="alert">
+        <strong>Message:</strong>{{message}}
+        <button type="submit" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% if user.is_authenticated %}
+    <img src="{% static 'images/mubs-logo.png'%}" style="height: 100%; width: 50px; margin-left: 20px; margin-top: 10px;"  alt="">
+    <p style="color: blue; text-align: center;" >MAKERERE UNIVERSITY BUSINESS SCHOOL</p>
+    <p> <span style="color: red">Hello </span> <span style="color: blueviolet;">mosh </span> <span style="color: red;">your are successfully logged in</span> </p>
+    <button type="submit" style="float: right; margin-top: 30px; margin-right: 50px; border: none;"><a href="{% url 'signout'%}" style="text-decoration: none; background:teal; color: white;">SignOut</a></button>
+</div>
+<div class="menu-bar">
+    <ul>
+        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        </li>
+        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>About us</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href="#">Mission</a></li>
+                    <li><a href="#">Vission</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa fa-clone" aria-hidden="true"></i>Services</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li class="hover-me"><a href="#">Web Designing</a><i class="fa fa-angle-right" aria-hidden="true"></i>
+                       <div class="sub-menu-2">
+                            
+                        <ul>
+                            <li><a href="#">SEO</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">Email Accounts</a></li>
+                        </ul>
+                       </div>
+
+
+                    </li>
+                    <li><a href="#">Desktop Application</a></li>
+                    <li class="hover-me"><a href="#">Mobile Apps</a>
+                        <div class="sub-menu-2">
+                            <ul>
+                                <li><a href="#">Android App</a></li>
+                                <li><a href="#">iOS App</a></li>
+                                <li><a href="#">Ionic App</a></li>
+                                <li><a href="#">Flater App</a></li>
+                            </ul>
+                           </div>
+                    
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i>Clients</a></li>
+        <li><a href="#"><i class="fa fa-edit" aria-hidden="true"></i>Training</a></li>
+        <li><a href="#"><i class="fa fa-angellist" aria-hidden="true"></i>Events</a></li>
+        <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>Contact us</a></li>
+    </ul>
+</div>
+<div class="main">
+    <img src="{% static 'images/Main.jpeg'%}" alt="">
+</div>
+<div class="sub-main">
+    <div class="sub-main1">
+    
+        <div class="col-1">
+            <div class="move-ryt">
+                <img style="width: 100%;border-radius: 50%;" src="{% static 'images/Main.jpeg'%}" alt="" />
+              </div>
+        </div>
+        
+        <div class="col-2">
+            <h2>About us</h2>
+            {% for student in students %} 
+            <p style="margin-top: 20px;">{{ student.Paragraphs}}</p>
+            {%endfor%}
+            
+        </div>
+        
+        
+        <div class="col-3">
+            <h2 style="text-align: center;">Students who have registered</h2><br>
+            <table style="width: 100%; border: 1px solid black; border-collapse: collapse;">
+                    <tr>
+                        <th style=" color: black; border: 1px solid black; padding: 10px; border-collapse: collapse;">
+                            Name
+                        </th>
+                        <th style="color: black; border: 1px solid black;padding: 1px; padding-right: 5px; border-collapse: collapse;">
+                            Student's No
+                        </th>
+                        <th style="border: 1px solid black; padding: 10px; border-collapse: collapse; color: black;">
+                            Reg No
+                            </th>
+                            <th style=" color: black; border: 1px solid black; padding: 10px; border-collapse: collapse;">
+                              Action</th>
+                    </tr>
+                    {%for student in students %}
+                    <tr>
+                        <td style="border: 1px solid black; padding: 5px; border-collapse: collapse;">
+                            {{student.Name}}
+                        </td>
+                        <td style="border: 1px solid black; padding: 5px; border-collapse: collapse;">
+                            {{student.Students_no}}
+                        </td>
+                        <td style="border: 1px solid black; padding: 5px; border-collapse: collapse;">
+                            {{student.Reg_no}}
+                        </td>
+                        <td style="border: 1px solid black; padding: 5px; border-collapse: collapse;"><button >Del</button><button>Edit</button></td>
+                    </tr>
+                    {%endfor%}
+            </table>  
+        </div>
+    
+    </div>
+</div>
+<br><br><br><br><br><br><br>
+    <footer class="footer">
+    <div class="social">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
+    </div>
+    <ul class="list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact  us</a></li>
+        <li><a href="#">Terms</a></li>
+    </ul>
+    <p class="copyright">
+        Mosh codes &copy; 2021 all rights reserved
+    </p>
+</footer>
+   {% else%}
+   <div style="text-align: center;"><br><br>
+   <h3>Please login first before you continue</h3><br>
+   <button style="width: 150px; border: 3px solid teal; border-radius: 5px; cursor: pointer;"><a href="{% url 'signin'%}" style="text-decoration: none; color: dodgerblue">Login</a></button>
+   <button style="width: 150px; border: 3px solid teal; border-radius: 5px; cursor: pointer;"><a href="{% url 'signup'%}" style="text-decoration: none;">create account</a></button><br><br><br>
+</div>
+   {% endif %}
+</body>
+</html>

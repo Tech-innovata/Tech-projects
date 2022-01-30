@@ -1,0 +1,696 @@
+/* Navbar section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    
+    line-height: 1.7em;
+  }
+  
+  .navbar {
+    height: auto;
+    background: teal;
+    color: #fff;
+     overflow: auto; 
+     width: auto;
+  }
+  
+  
+  .navbar a  h2{
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    float: right;
+  }
+  
+  .navbar ul li {
+    float: left;
+  }
+  
+  .navbar ul li a {
+    display: block;
+    padding: 20px;
+    /* text-align: center; */
+  }
+  
+  .navbar nav ul li a:hover {
+    color: blue;
+  }
+  
+  .Mission {
+    background: url("../img/back.jpg") no-repeat center center/cover;
+    height: 600px;
+  }
+  
+  p {
+    text-align: center;
+    padding-bottom: 10px;
+    line-height: 1.7em;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 170px;
+    font-size: 60px;
+    line-height: 1.2em;
+  }
+  
+  h2 {
+    color: yellowgreen;
+  }
+  
+  h3 {
+    padding-bottom: 20px;
+  }
+  
+  /* Utility classes */
+  .container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+  }
+  
+  .lead {
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+  }
+  
+  
+  
+  .me {
+    color: black;
+  }
+  
+  .bg-primary {
+    background: wheat;
+    color: black;
+  }
+  .bg-dark {
+    background: #333;
+    padding-bottom: 2px;
+  }
+  
+  .bg-light {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  .bg-white {
+    background: whitesmoke;
+  }
+  
+  .btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #333;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: wheat;
+    color: #333;
+  }
+  
+  .l-heading {
+    line-height: 1.2;
+    padding-top: 30px;
+  }
+  
+  .guests {
+   
+    font-size: 50px;
+  }
+  
+  .pdg-1 {
+    padding: 30px 0;
+  }
+  
+  
+  
+  .Samantha {
+    padding-top: 70px;
+  }
+  
+  .words {
+    text-align: justify;
+    padding: 20px;
+    padding-top: 40px;
+  }
+  
+  /* Upper part */
+  #Mission .Mission-content {
+    color: white;
+  }
+  
+  /* Middle part of home page */
+  
+  #home-info {
+    height: 350px;
+  }
+  
+  #home-info .info-content {
+    float: right;
+    width: 50%;
+    text-align: center;
+    padding: 50px 30px;
+    height: 100%;
+    overflow: hidden;
+    color: #333;
+  }
+  
+  /* Features */
+  .box {
+    float: left;
+    width: 33.3%;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  /* About page */
+  
+  #about-info .more-info {
+    float: left;
+    width: 50%;
+    padding-bottom: 90px;
+    
+  }
+  
+  #about-info .move-ryt img {
+    display: block;
+    margin: auto;
+    width: 90%;
+    border-radius: 50%;
+  }
+  
+  #about-info .move-ryt {
+    float: right;
+    width: 50%;
+    padding-top: 20px;
+  
+  }
+  
+  
+  
+  #Opinions .guests {
+    color: black;
+    text-align: center;
+    padding: 100px;
+    background: wheat;
+  }
+  
+  #Opinions .opinion {
+    padding: 30px;
+    margin-bottom: 1px;
+    border-radius: 6px;
+   
+  }
+  
+  #Opinions .opinion img {
+    width: 11%;
+    float: left;
+    border-radius: 80%;
+  }
+  
+  /* Contact Page */
+  
+  #contact-form .form-list {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px #ddd solid;
+  }
+  
+  #contact-form textarea {
+    height: 200px;
+  }
+  
+  /* Footer */
+  #main-footer {
+    text-align: center;
+    background: greenyellow;
+    color: #fff;
+    padding-top: 5px;
+  }
+  /*form*/
+  .form{
+    text-align: center;
+      width: auto;
+      height: auto;
+      background: teal;
+      margin-left: 500px;
+      margin-top: 100px;
+      border-radius: 10px;
+      padding: 25px;
+  }
+  .form h2 {
+      width: 220px;
+      font-family: 'Times New Roman';
+      text-align: center;
+      font-size: 22px;
+      background-color: wheat;
+      border-radius: 10px;
+      margin: 2px;
+      padding: 8px;
+      margin-left: 33px;
+    }
+    .form input{
+       width: 200px;
+       height: 35px;
+       background: transparent;
+       border-bottom: 1px solid gray;
+       border-top: none;
+       border-left: none;
+       border-right: none;
+       color: black;
+       font-size: 15px;
+       letter-spacing: 1px;
+       margin-top: 30px;
+       font-family: 'Times New Roman';
+    }
+    .form input:focus{
+        outline: none;
+    }
+    
+    .btn{
+        width: 240px;
+        height: 40px;
+        border: none;
+        margin-top: 30px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: wheat;
+        transition: 0.4s ease;
+    }
+    .btn:hover{
+        background: greenyellow;
+        color: #ff7200;
+    }
+    .btn a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    .form .link{
+        font-family: 'Times New Roman';
+        font-size: 17px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    .form .link a{
+        text-decoration: none;
+        color: #ff7200;
+    }
+    .icons a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .icons ion-icon{
+        color: #fff;
+        font-size: 30px;
+        padding-left: 14px;
+        padding-top: 5px;
+        transition: 0.3s ease;
+    }
+    .icons ion-icon:hover{
+        color: #ff7200;
+    }
+    /*for the login*/
+    .fullpage1{
+      height: 100%;
+      width: 100%;
+      /*background: linear-gradient(to top( rgb(0, 0,0.4)50%,rgba(0,0,0.4)50%)),url("../img/home image.jpg");*/
+      background-position: center;
+      background: teal;
+      background: url("../images/home image.jpg") no-repeat center center/cover;
+      background-size: cover;
+      position: absolute;
+    }
+
+    .fullpage{
+      height: 100%;
+      width: 100%;
+      /*background: linear-gradient(to top( rgb(0, 0,0.4)50%,rgba(0,0,0.4)50%)),url("../img/home image.jpg");*/
+      background-position: center;
+      background: teal;
+      background: url("../images/background.jpg") no-repeat center center/cover;
+      background-size: cover;
+      position: absolute;
+    }
+    .navbar{
+      display: flex;
+      text-align: center;
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 20px;
+    }
+    .navbar a{
+      margin-top: 15px;
+    }
+    nav{
+      flex: 1;
+      text-align: right;
+    }
+    nav ul {
+      display: inline-block;
+      list-style: none;
+    }
+    nav ul li {
+      display: inline-block;
+      margin-right: 40px;
+    }
+    nav ul li a{
+      text-decoration: none;
+      font-size: 20px;
+      color: #fff;
+      font-family: 'Times New Roman';
+    }
+    nav ul li button{
+      font-size: 20px;
+      color: white;
+      outline: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-family:'Times New Roman';
+    }
+    nav ul li button:hover{
+      color: aqua;
+    }
+    nav ul li a:hover{
+      color: aqua;
+    }
+    a{
+      text-decoration: none;
+      color: palevioletred;
+      font-size: 28px;
+    }
+
+   #login-form{
+      
+      display: none;
+     /* this is for hiding the form*/
+    }
+    .form-box{
+      width: 380px;
+      height: 520px;
+      position: relative;
+      margin: 2% auto;
+      background: teal;
+      padding: 10px;
+      overflow: hidden;
+    }
+    .button-box{
+      width: 220px;
+      margin: 35px auto;
+      position: relative;
+      box-shadow: 0 0 20px 9px #ff61241f;
+      border-radius: 30px;
+    }
+    .toggle-btn{
+      padding: 10px 30px;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      outline: none;
+      position: relative;
+    }
+    #btn{
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 110px;
+      height: 100%;
+      color: blue;
+      background: #f3c693;
+      border-radius: 30px;
+      transition: 5s;
+    }
+    
+    .input-group-login{
+      top: 60px;
+      position: absolute;
+      width: 280px;
+      transition: 5s;
+      color: white;
+    }
+    .input-group-register{
+      top: 120px;
+      position: absolute;
+      width: 280px;
+      transition: 5s;
+      color: white;
+    }
+    .input-field{
+      width: 80%;
+      padding: 10px 0;
+      margin: 5px 0;
+      border-left: 0;
+      border-top: 0;
+      border-bottom: 1px solid #999;
+      color: black;
+    }
+    .submit-btn{
+      width: 85%;
+      padding: 10px 30px;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      background: #f3c693;
+      border: 0;
+      outline: none;
+      color: blue;
+      border-radius: 30px;
+    }
+    .check-box{
+      margin: 30px 10px 34px 0;
+    }
+    span{
+      color: #777;
+      font-size: 12px;
+      bottom: 68px;
+      position: absolute;
+    }
+    #login{
+      left: 50px;
+    }
+    #login input{
+      color: #fff;
+      font-size: 15;
+    }
+    #register{
+      left: 450px;
+    }
+    #register input{
+      color: #fff;
+      font-size: 15;
+    }
+    h2{
+      color:white ;
+    }
+    
+/*====================================================
+                       SOCIAL
+======================================================*/
+
+.social-icons{
+  margin: 2px;
+}
+.social-icons a i {
+  margin: 5px;
+  margin-left: 30px;
+  color: blue;
+  font-size: 30px;
+}
+.social-icons a i:hover{
+  color: #fff;
+}
+/* contact css */
+
+#navbar {
+  background: darkgoldenrod;
+  color: #fff;
+  /* overflow: auto; */
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar ul {
+  list-style: none;
+  float: right;
+}
+
+#navbar ul li {
+  float: left;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 5px;
+  /* text-align: center; */
+}
+
+#navbar ul li a:hover {
+  background: wheat;
+  color: darkslategray;
+}
+
+#Mission {
+  background: url("../img/img7.jpg") no-repeat center center/cover;
+  height: 600px;
+}
+
+p {
+  text-align: center;
+  padding-bottom: 20px;
+  line-height: 1.7em;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 170px;
+  font-size: 60px;
+  line-height: 1.2em;
+}
+
+h2 {
+  color: #fff;
+}
+
+h3 {
+  padding-bottom: 20px;
+}
+
+/* Utility classes */
+.container {
+  margin: auto;
+  max-width: 1100px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.lead {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+
+
+.me {
+  color: black;
+}
+
+.bg-primary {
+  background: wheat;
+  color: black;
+}
+.bg-dark {
+  background: #333;
+  padding-bottom: 2px;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-white {
+  background: whitesmoke;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  background: #333;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: wheat;
+  color: #333;
+}
+
+.l-heading {
+  line-height: 1.2;
+  padding-top: 30px;
+}
+
+.guests {
+ 
+  font-size: 50px;
+}
+
+.pdg-1 {
+  padding: 30px 0;
+}
+
+
+
+.Samantha {
+  padding-top: 70px;
+}
+
+.words {
+  text-align: justify;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+/* Upper part */
+#Mission .Mission-content {
+  color: white;
+}
+
+/* Middle part of home page */
+
+#home-info {
+  height: 350px;
+}
+
+#home-info .info-img {
+  float: left;
+  background: url("../img/showcase.jpg") no-repeat;
+  width: 50%;
+  min-height: 100%;
+}
+#home-info .info-content {
+  float: right;
+  width: 50%;
+  text-align: center;
+  padding: 50px 30px;
+  height: 100%;
+  overflow: hidden;
+  color: #333;
+}
+
+
+

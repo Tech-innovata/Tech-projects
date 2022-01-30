@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <!--connecting my static file here-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <!-- fontawesome -->
+   <link rel="stylesheet" href="{% static 'css/font-awesome/css/font-awesome.min.css' %}">
+</head>
+<body>
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show " role="alert">
+        <strong>Message:</strong>{{message}}
+        <button type="submit" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% if user.is_authenticated %}
+    <h3>hello {{ fname}}</h3>
+    <h4>your are successfully logged in</h4>
+    <button type="submit"><a href="{% url 'signout'%}">SignOut</a></button>
+    {% else %}
+    <div class="fullpage1">
+        <div class="navbar" style="background: teal;">
+          <img src="{% static 'images/mubs-logo.png'%}" style="height: 40px;"></img>
+          <nav class="navigate">
+            <ul style="float: right;">
+              <li style="float: left;"><a href="{% url 'joinus'%}">Join us</a></li>
+              <li style="float: left;"><a href="{% url 'signin'%}">SignIn</a></li>
+              <li style="float: left;"><a href="{% url 'signup'%}">SignUp</a></li>
+            </ul>
+          </nav>
+        </div>
+        <h3 style="text-align: center; color: white; font-size: 40px; margin-top: 30px;">Welcome to MUBS</h3>
+        <!-- <img src="{% static 'images/home image.jpg' %}" alt="" style="background-size: cover; background-repeat: no-repeat;"> -->
+      </div>
+  
+    {% endif %}
+    
+</body>
+</html>
